@@ -1,0 +1,30 @@
+/* product-detail.component.css */
+
+/* Adjust image size */
+.img-fluid {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  /* Card styling */
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .text-primary {
+    font-weight: bold;
+  }
+  
+  .btn-secondary {
+    margin-top: 1rem;
+  }
+  .card{
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+  }
+  

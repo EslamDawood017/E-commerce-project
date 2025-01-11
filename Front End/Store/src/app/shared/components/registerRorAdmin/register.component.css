@@ -1,0 +1,38 @@
+/* Custom styles for the form */
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.error-message {
+    color: #dc3545; /* Bootstrap's red for error messages */
+    font-size: 0.875rem;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: bold;
+}

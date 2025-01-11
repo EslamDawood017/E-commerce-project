@@ -1,0 +1,23 @@
+.filterDiv{
+    display: flex;
+    padding-left: 90px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+    
+label{
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2d5b62;
+}
+#category {
+    border: 2px solid #33c3b9;
+    border-radius: 4px; 
+    padding: 5px;       
+    color: #333; 
+    height: 48px;         
+}
+.selectFilter{
+    height: 45px;
+}

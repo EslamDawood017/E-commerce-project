@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|e:\\courses\\programming courses\\projects\\e-commerce project\\back end\\store\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|e:\\courses\\programming courses\\projects\\e-commerce project\\back end\\store\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|e:\\courses\\programming courses\\projects\\e-commerce project\\back end\\store\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224B8141-FDAA-4F90-B926-6CB22C6DF24D}|Store.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\ProductController.cs*",
+              "RelativeToolTip": "Controllers\\ProductController.cs*",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwFIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T16:30:32.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
+              "ToolTip": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T16:28:41.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "E:\\Courses\\Programming Courses\\Projects\\E-Commerce Project\\Back End\\Store\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T15:48:51.846Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+/* Center the login card vertically and horizontally */
+.FromContainer{
+    margin-top: 150px;
+    
+    margin:150px auto 0 auto;
+
+}
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .login-card .card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Add subtle shadow */
+  .login-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input field styling */
+  .form-control {
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #007bff;
+  }
+  
+  /* Small text for error messages */
+  .text-danger.small {
+    font-size: 0.875rem;
+  }
+  

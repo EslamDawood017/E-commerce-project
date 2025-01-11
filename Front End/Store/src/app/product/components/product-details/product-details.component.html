@@ -1,0 +1,37 @@
+<!-- product-detail.component.html -->
+<div class="container mt-4" *ngIf="!loading && !error">
+    <div class="card mb-4 shadow-sm">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="host+ CurrentProduct.productImage" class="img-fluid rounded-start" alt="{{ CurrentProduct.name }}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">{{ CurrentProduct.name }}</h3>
+            <p class="card-text">{{ CurrentProduct.description }}</p>
+            <h4 class="text-primary">${{ CurrentProduct.price }}</h4>
+            <p class="card-text"><small class="text-muted">Stock: {{ CurrentProduct.stockQuantity }}</small></p>
+            <button class="btn btn-secondary" (click)="goBack()">Back to Products</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Loading Indicator -->
+  <div class="container mt-4" *ngIf="loading">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Error Message -->
+  <div class="container mt-4" *ngIf="error">
+    <div class="alert alert-danger" role="alert">
+      {{ error }}
+    </div>
+    <button class="btn btn-secondary" (click)="goBack()">Back to Products</button>
+  </div>
+  

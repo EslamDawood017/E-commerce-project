@@ -1,0 +1,56 @@
+<div class="order-details-container">
+  <div class="header">
+    <h2>Order Details</h2>
+    <button class="back-btn" (click)="goBack()">Back to Orders</button>
+  </div>
+
+  <div class="order-info">
+    <h3>Order Information</h3>
+    <div class="info-grid">
+      <div>
+        <strong>Order ID:</strong> {{ order?.orderId }}
+      </div>
+      <div>
+        <strong>Customer Name:</strong> {{ order?.cutomerName }}
+      </div>
+      <div>
+        <strong>Status:</strong> 
+        <span >
+          {{ order?.status }}
+        </span>
+      </div>
+      <div>
+        <strong>Order Date:</strong> {{ order?.orderDate | date: 'medium' }}
+      </div>
+      <div>
+        <strong>Total Price:</strong> {{ order?.totalAmount | currency }}
+      </div>
+    </div>
+  </div>
+
+  <div class="order-items">
+    <h3>Items</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orderDetails">
+          <td>{{ item.productName }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price | currency }}</td>
+          <td>{{ item.quantity * item.price | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+

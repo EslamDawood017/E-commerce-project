@@ -1,0 +1,26 @@
+<nav>
+    <div class="container">
+        <div class="content">
+            <a class="logo">Market</a>
+            <ul>
+                <li routerLink="/Home" routerLinkActive="Active" [routerLinkActiveOptions]="{exact :true}">Home</li>
+                <li >About</li>
+                <li >Services</li>
+                <li >Contact</li>
+                         
+            </ul>
+            <ul class="auth">
+                @if((isLoggedIn$ | async )) 
+                {
+                    <li (click)="logout()">Logout</li>
+                    <li routerLink="/UserInfo">Profile</li>
+                    
+                }@else {
+                    <li routerLink="/RegisterUser" routerLinkActive="Active">Register</li>
+                    <li routerLink="/login" routerLinkActive="Active">Login</li>
+                } 
+            </ul>
+
+        </div>
+    </div>
+</nav>

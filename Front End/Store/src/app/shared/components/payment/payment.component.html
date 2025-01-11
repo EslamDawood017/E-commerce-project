@@ -1,0 +1,46 @@
+<div class="payment-container">
+  
+  <h2>Complete Your Payment</h2>
+  <p>Total Amount: ${{ amount }}</p>
+
+    <!-- Cardholder Name -->
+    <div class="form-group">
+      <label for="cardholderName">Cardholder Name</label>
+      <input type="text" id="cardholderName" placeholder="John Doe" required />
+    </div>
+
+    <!-- Card Number -->
+    <div class="form-group">
+      <label for="cardNumber">Card Number</label>
+      <div id="card-element" class="card-input">
+        <!-- Stripe.js will inject card details here -->
+      </div>
+    </div>
+
+    <!-- Expiration Date and CVC -->
+    <div class="form-row">
+      <div class="form-group half-width">
+        <label for="expDate">Expiration Date</label>
+        <input type="text" id="expDate" placeholder="MM/YY" required />
+      </div>
+      <div class="form-group half-width">
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" placeholder="123" required />
+      </div>
+    </div>
+
+    <!-- Billing ZIP Code -->
+    <div class="form-group">
+      <label for="zipCode">Billing ZIP Code</label>
+      <input type="text" id="zipCode" placeholder="12345" required />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn-primary" (click)="handlePayment()">Submit Payment</button>
+
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

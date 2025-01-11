@@ -1,0 +1,9 @@
+<div class="form-group mb-3 filterDiv">
+    <select #SelectFiler id="category" class="form-control selectFilter" (change)="onCategoryChange($event)" >
+      <option [value]="null" disabled selected>Choose a Category</option>
+      <option [value]="0">All</option>
+      <option *ngFor="let category of categories" [value]="category.categoryId">
+        {{ category.categoryName }}
+      </option>
+    </select>
+</div>

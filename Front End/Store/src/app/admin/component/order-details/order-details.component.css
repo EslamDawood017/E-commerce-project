@@ -1,0 +1,99 @@
+/* General Container Styles */
+.order-details-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #edf1fb66;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.back-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Order Info Section */
+.order-info {
+  margin-bottom: 30px;
+}
+
+.order-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.info-grid div {
+  font-size: 16px;
+  color: #555;
+}
+
+
+
+/* Order Items Section */
+.order-items h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.order-items table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.order-items table th,
+.order-items table td {
+  padding: 10px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.order-items table th {
+  background-color: #919fad;
+  color: #333;
+  font-weight: bold;
+}
+
+.order-items table td {
+  color: #555;
+}
+
+.order-items table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

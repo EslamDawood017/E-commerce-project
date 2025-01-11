@@ -1,0 +1,68 @@
+.profile-container {
+  width: 400px; /* Adjust as needed */
+  margin: 50px auto; /* Center the container */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif; /* Use a clean font */
+  background-color: #f9f9f9; /* Light background */
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Darker heading color */
+}
+
+.profile-container div {
+  margin-bottom: 15px;
+}
+
+.profile-container label {
+  display: block; /* Make labels appear above inputs */
+  margin-bottom: 5px;
+  font-weight: 600; /* Slightly bolder labels */
+  color: #555;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="email"],
+.profile-container input[type="password"] {
+  width: calc(100% - 12px); /* Full width minus padding */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width */
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+.profile-container input[type="text"]:focus,
+.profile-container input[type="email"]:focus,
+.profile-container input[type="password"]:focus {
+  border-color: #007bff; /* Highlight on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle box shadow on focus */
+}
+
+.profile-container button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width button */
+}
+
+.profile-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.profile-container button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: default;
+}

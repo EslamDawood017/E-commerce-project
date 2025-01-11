@@ -1,0 +1,50 @@
+
+<div class="header">
+  <div>Shopping Card</div>
+  <div class="items-number" *ngIf="items.length > 0" >You have {{items.length}} items in Your Card</div>
+</div>
+
+
+<div class="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+        <div class="line"></div>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items ; let index = index" class="item-row">
+          <td><img [src]=" host+ item.product.productImage" alt="{{ item.name }}" class="cart-item-image" /></td>
+          <td>{{ item.product.name }}</td>
+          <td>${{ item.product.price }}</td>
+          <td class="quantity-controls">
+            <button class="btn btn-primary" (click)="decreaseQuantity(index)"  >-</button>
+            <input [(ngModel)]="item.quantity" type="number"  min="1" (change)="UpdateData()" class="form-control w-25 m-3"  />
+            <button class="btn btn-primary" (click)="increaseQuantity(index)"  >+</button>
+          </td>
+          <td>${{ item.product.price * item.quantity }}</td>
+          <td>
+            <button class="btn btn-remove" (click)="deleteProduct(index)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="items.length == 0" class="total-cost empty">
+      your Card is Empty
+    </div>
+    <div class="total-cost">
+      Total : ${{getTotalNumber()}}
+    </div>
+    <div class="cart-actions">
+      <button  class="clear-cart-btn" (click)="ClearAllProduct()">Clear Cart</button>
+      <button  class="order-btn"(click)="onOrderNow()">Order Now</button>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,35 @@
+<div class="admin-orders-container">
+    <h2 class="admin-orders-title">Order Management</h2>
+  
+    <table class="orders-table" *ngIf="orders && orders.length > 0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.cutomerName }}</td>
+          <td>{{ order.orderDate | date: 'medium' }}</td>
+          <td>{{ order.totalAmount | currency: 'USD' }}</td>
+          <td>{{ order.status }}</td>
+          <td class="order-actions">
+            <button class="view-btn" routerLink="/order-details/{{order.orderId}}">View</button>
+            <button class="update-btn" [routerLink]="['/UpdateStatus']" [state]="{ order: order }">Update</button>
+            <button class="delete-btn" (click)="deleteOrder(order.orderId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p class="no-orders-message" *ngIf="!orders || orders.length === 0">
+      No orders found.
+    </p>
+  </div>
+  

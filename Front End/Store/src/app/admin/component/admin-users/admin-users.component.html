@@ -1,0 +1,37 @@
+
+
+
+<div class="admin-user-management">
+    <!-- Header Section -->
+    <div class="admin-header">
+      <h1>User Management</h1>
+      <button class="add-user-btn" routerLink="/Register">Add New User</button>
+    </div>
+  
+    <!-- Table Section -->
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.userName }}</td>
+          <td>{{ user.userEmail }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <button class="action-btn edit-btn m-2" routerLink="/adminUpdateUser" [queryParams]="user">Edit</button>
+            <button class="action-btn delete-btn m-1" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+

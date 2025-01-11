@@ -1,0 +1,28 @@
+<div class="container-Cart" >
+    <div class="card-image">
+        <img  [src]="environment+ data.productImage" alt="{{data.name}}">
+    </div>
+    <div class="card-content ">
+        
+        <h2>{{data.name}}</h2>
+        <p>{{data.description}}</p>
+        <p><strong>STOK: {{data.stockQuantity}}</strong> </p>
+        <div class="card-price">${{data.price}}</div>
+        <div class="card-rating">
+            <span>★★★☆☆</span>
+        </div>
+      
+        
+    </div>
+    <div class="buttons">
+        <button routerLink="/Products/Product/{{data.id}}" class ="view-Details">View Details </button>
+        <button class="add-to-cart"  *ngIf="!showProductqauntity" (click)="showProductqauntity = true">ADD TO CART</button>
+        <div class=" w-75 m-auto" *ngIf="showProductqauntity">
+            <input type="number" min = 0 class="form-control" placeholder="Enter quantity" [(ngModel)]="Amount">
+            <button class="add-to-cart add" (click)="add()">Add</button>
+        </div>
+    </div>
+
+</div>
+
+

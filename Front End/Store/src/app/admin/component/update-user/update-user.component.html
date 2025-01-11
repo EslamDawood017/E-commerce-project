@@ -1,0 +1,50 @@
+<div class="update-user-container">
+    <h2>Update User Information</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <!-- User ID (Readonly) -->
+      <div class="form-group">
+        <label for="id">User ID:</label>
+        <input id="id" type="text" class="form-control" formControlName="id" readonly />
+      </div>
+  
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          id="name"
+          type="text"
+          class="form-control"
+          formControlName="userName"
+          placeholder="Enter user name"
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="userEmail">Email:</label>
+        <input
+          id="userEmail"
+          type="email"
+          class="form-control"
+          formControlName="userEmail"
+          placeholder="Enter user email"
+        />
+      </div>
+  
+      <!-- Role -->
+      <div class="form-group">
+        <label for="Role">Role:</label>
+        <select id="Role" class="form-control" formControlName="role">
+          <option value="Admin">Admin</option>
+          <option value="Customer">Customer</option>
+        </select>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Update User</button>
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

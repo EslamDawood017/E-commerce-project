@@ -1,0 +1,16 @@
+<div class="update-status-container">
+    <h2>Update Order Status</h2>
+    <p>Order ID: {{ order?.orderId }}</p>
+    <p>Current Status: {{ order.status }}</p>
+  
+    <label for="status">Select New Status:</label>
+    <select [(ngModel)]="selectedStatus" id="status">
+      <option *ngFor="let status of statuses" [value]="status.id">{{ status.label }}</option>
+    </select>
+  
+    <div class="buttons">
+      <button class="update-btn" (click)="updateStatus()">Update</button>
+      <button class="cancel-btn" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+  

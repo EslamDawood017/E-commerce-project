@@ -1,0 +1,16 @@
+# Front-end
+Front End/Store/node_modules/
+Front End/Store/dist/
+Front End/Store/*.env
+Front End/Store/*.log
+
+# Back-end
+Back End/Store/bin/
+Back End/Store/obj/
+Back End/Store/*.env
+Back End/Store/*.log
+
+# OS-specific and IDE files
+.vscode/
+.DS_Store
+Thumbs.db

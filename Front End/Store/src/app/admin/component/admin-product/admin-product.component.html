@@ -1,0 +1,29 @@
+<div class="admin-products-container">
+    <h1>Product Management</h1>
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td><img [src]="domain + product.productImage  " alt="{{ product.name }}" class="product-image"></td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.categoryName }}</td>
+          <td>{{ product.stockQuantity}}</td>
+          <td>
+            <button class="btn-update" (click)="updateProduct(product)">Update</button>
+            <button class="btn-delete" (click)="deleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

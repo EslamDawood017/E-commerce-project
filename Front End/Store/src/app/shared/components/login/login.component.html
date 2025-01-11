@@ -1,0 +1,37 @@
+<div class="FromContainer d-flex justify-content-center">
+    <div class="card shadow login-card">
+        <div class="card-body p-5">
+          <h2 class="card-title text-center mb-4">Login</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            
+            <!-- Username Field -->
+            <div class="mb-4">
+              <label for="username" class="form-label">Username</label>
+              <input id="username" formControlName="username" type="text" class="form-control" placeholder="Enter your username" />
+              <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="text-danger small mt-1">
+                Username is required
+              </div>
+            </div>
+    
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" formControlName="password" type="password" class="form-control" placeholder="Enter your password" />
+              <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="text-danger small mt-1">
+                Password is required
+              </div>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
+    
+            <!-- Error Message -->
+            <div *ngIf="loginError" class="text-danger mt-3 text-center">
+              {{ loginError }}
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+    
+  
