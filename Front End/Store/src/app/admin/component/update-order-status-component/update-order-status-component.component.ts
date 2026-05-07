@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { Order } from '../../../Models/Order';
+import { Order } from '../../../shared/models/Order';
 import { OrderService } from '../../services/Order/order.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-update-order-status-component',
   standalone: true,
-  imports: [CommonModule , FormsModule , RouterLink],
+  imports: [CommonModule, FormsModule],
   templateUrl: './update-order-status-component.component.html',
-  styleUrl: './update-order-status-component.component.css'
+  styleUrl: './update-order-status-component.component.css',
 })
 export class UpdateOrderStatusComponentComponent implements OnInit {
-
-  order! : Order  ;
-  selectedStatus : number  = 1 ;
+  order!: Order;
+  selectedStatus: number = 1;
+  isSaving = false;
   statuses = [
     { id: 1, label: 'Pending' },
     { id: 2, label: 'Shipped' },
@@ -25,23 +25,25 @@ export class UpdateOrderStatusComponentComponent implements OnInit {
     { id: 5, label: 'Returned' },
   ];
 
-
-  constructor(private orderService : OrderService , 
-    private route : ActivatedRoute , 
-    private router : Router) {}
+  constructor(
+    private orderService: OrderService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     const state = history.state;
     this.order = state?.order;
-
     if (!this.order) {
       Swal.fire({
         icon: 'error',
         title: 'No Order Data',
         text: 'No order information available. Returning to order management.',
-      }).then(() => this.router.navigate(['/Orders']));
+      }).then(() => this.router.navigate(['/admin/orders']));
     } else {
-      this.selectedStatus = this.statuses.find(p => p.label == this.order.status)!.id;
+      this.selectedStatus = this.statuses.find(
+        (p) => p.label == this.order.status,
+      )!.id;
     }
   }
 
@@ -50,17 +52,32 @@ export class UpdateOrderStatusComponentComponent implements OnInit {
     return status ? status.label : 'Unknown';
   }
 
+  getSelectedStatusLabel(): string {
+    const status = this.statuses.find(
+      (item: any) => item.id == this.selectedStatus,
+    );
+
+    return status ? status.label : 'Choose Status';
+  }
+
   updateStatus() {
-    this.orderService.UpdateStatus(this.order.orderId , this.selectedStatus)
+    if (!this.order || this.isSaving) {
+      return;
+    }
+    this.isSaving = true;
+    this.orderService
+      .UpdateStatus(this.order.orderId, this.selectedStatus)
       .subscribe({
         next: () => {
+          this.isSaving = false;
           Swal.fire({
             icon: 'success',
             title: 'Status Updated',
             text: `Order status updated to ${this.getStatusLabel(this.selectedStatus)}.`,
-          }).then(() => this.router.navigate(['/Orders']));
+          }).then(() => this.router.navigate(['/admin/orders']));
         },
         error: (err) => {
+          this.isSaving = false;
           console.error('Error updating status:', err);
           Swal.fire({
             icon: 'error',
@@ -72,8 +89,6 @@ export class UpdateOrderStatusComponentComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['/Orders']);
+    this.router.navigate(['/admin/orders']);
   }
-
-
 }
